@@ -3,277 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drovenq Solutions - Solving Your Service Issues</title>
-    <meta name="description" content="Facing service issues? Drovenq Solutions helps you resolve payment disputes, customer service escalations, and bureaucratic problems quickly and efficiently.">
+    <title>Drovenq AI - The AI That Understands You</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.344.0/lucide.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <h2 class="logo">Drovenq</h2>
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                        <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                    </svg>
+                    <span class="logo-text">Drovenq AI</span>
+                </div>
+                <nav class="nav">
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#examples">Use Cases</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
             </div>
-            <ul class="nav__menu" id="nav-menu">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">About</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#services" class="nav__link">Services</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contact</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#faq" class="nav__link">FAQ</a>
-                </li>
-            </ul>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <div class="hero__content">
-                <h1 class="hero__title">
-                    Facing Service Issues? Let <span class="highlight">Drovenq</span> Solve Them for You.
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Meet <span class="text-primary">Drovenq AI</span>:<br>
+                    The AI That <span class="text-gradient">Understands You</span>
                 </h1>
-                <p class="hero__subtitle">
-                    From refund delays to customer support battles — we take it from here.
+                <p class="hero-subtitle">
+                    Solving problems with empathy, context, and real-world common sense.<br>
+                    Experience AI that thinks like a human, not just a machine.
                 </p>
-                <div class="hero__cta">
-                    <a href="#contact" class="btn btn--primary">Get Help Now</a>
-                    <a href="#services" class="btn btn--secondary">Learn More</a>
-                </div>
-            </div>
-            <div class="hero__image">
-                <div class="hero__illustration">
-                    <i class="fas fa-handshake hero__icon"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features/Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Our Solutions</h2>
-                <p class="section__subtitle">We handle your toughest service challenges</p>
-            </div>
-            <div class="services__grid">
-                <div class="service__card">
-                    <div class="service__icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3 class="service__title">Transaction Disputes</h3>
-                    <p class="service__description">
-                        Resolve payment issues, chargebacks, and financial disputes with banks and merchants.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3 class="service__title">Service Escalations</h3>
-                    <p class="service__description">
-                        Take your complaints to the right authorities when customer service fails you.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <h3 class="service__title">Documentation Support</h3>
-                    <p class="service__description">
-                        Professional documentation and communication to strengthen your case.
-                    </p>
-                </div>
-                <div class="service__card">
-                    <div class="service__icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="service__title">Peace of Mind</h3>
-                    <p class="service__description">
-                        Focus on what matters while we handle the stress of resolution processes.
-                    </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        Request Demo
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary">Learn How It Works</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="process" id="about">
+    <!-- Core Capabilities -->
+    <section class="capabilities">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">How It Works</h2>
-                <p class="section__subtitle">Simple 3-step process to resolution</p>
+            <div class="section-header">
+                <h2 class="section-title">Why Drovenq AI is Different</h2>
+                <p class="section-subtitle">
+                    Traditional AI misses the human element. We've built intelligence that combines logic with empathy, speed with wisdom.
+                </p>
             </div>
-            <div class="process__steps">
-                <div class="step">
-                    <div class="step__number">1</div>
-                    <div class="step__content">
-                        <h3 class="step__title">Submit Your Issue</h3>
-                        <p class="step__description">
-                            Tell us about your problem with detailed information and supporting documents.
-                        </p>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <div class="capability-icon heart">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>
+                        </svg>
                     </div>
+                    <h3 class="capability-title">Emotionally Aware Reasoning</h3>
+                    <p class="capability-description">Detects tone and responds with empathy, understanding the human element behind every problem.</p>
                 </div>
-                <div class="step">
-                    <div class="step__number">2</div>
-                    <div class="step__content">
-                        <h3 class="step__title">We Contact Authorities</h3>
-                        <p class="step__description">
-                            Our experts reach out to the right people and escalate your case professionally.
-                        </p>
+                <div class="capability-card">
+                    <div class="capability-icon brain">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                        </svg>
                     </div>
+                    <h3 class="capability-title">Contextual Intelligence</h3>
+                    <p class="capability-description">Understands nuanced, situational meaning beyond literal interpretation.</p>
                 </div>
-                <div class="step">
-                    <div class="step__number">3</div>
-                    <div class="step__content">
-                        <h3 class="step__title">Resolution Delivered</h3>
-                        <p class="step__description">
-                            Get your issue resolved and receive regular updates throughout the process.
-                        </p>
+                <div class="capability-card">
+                    <div class="capability-icon target">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
                     </div>
+                    <h3 class="capability-title">Built-in Common Sense</h3>
+                    <p class="capability-description">Avoids literal but nonsensical responses with real-world reasoning.</p>
+                </div>
+                <div class="capability-card">
+                    <div class="capability-icon zap">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/>
+                        </svg>
+                    </div>
+                    <h3 class="capability-title">Fast & Reliable</h3>
+                    <p class="capability-description">Combines processing speed with depth, clarity, and thoughtful analysis.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">What Our Clients Say</h2>
-                <p class="section__subtitle">Success stories from satisfied customers</p>
+            <div class="section-header">
+                <h2 class="section-title">How It Works — Reimagined</h2>
+                <p class="section-subtitle">
+                    Three simple steps to transform your problems into thoughtful, empathetic solutions.
+                </p>
             </div>
-            <div class="testimonials__grid">
-                <div class="testimonial__card">
-                    <div class="testimonial__content">
-                        <p class="testimonial__text">
-                            "Drovenq helped me recover my stuck refund when the company kept giving me the runaround. Professional and effective!"
-                        </p>
-                        <div class="testimonial__author">
-                            <strong>Priya Sharma</strong>
-                            <span>Mumbai</span>
-                        </div>
-                    </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number blue">1</div>
+                    <h3 class="step-title">Describe Your Problem</h3>
+                    <p class="step-description">Text, voice, or data input with optional context tags for better understanding.</p>
                 </div>
-                <div class="testimonial__card">
-                    <div class="testimonial__content">
-                        <p class="testimonial__text">
-                            "After months of failed attempts, Drovenq resolved my banking dispute in just 2 weeks. Highly recommended!"
-                        </p>
-                        <div class="testimonial__author">
-                            <strong>Rajesh Kumar</strong>
-                            <span>Delhi</span>
-                        </div>
-                    </div>
+                <div class="step-arrow">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
                 </div>
-                <div class="testimonial__card">
-                    <div class="testimonial__content">
-                        <p class="testimonial__text">
-                            "Excellent service! They handled my insurance claim professionally and got me the settlement I deserved."
-                        </p>
-                        <div class="testimonial__author">
-                            <strong>Anita Patel</strong>
-                            <span>Ahmedabad</span>
-                        </div>
-                    </div>
+                <div class="step-card">
+                    <div class="step-number purple">2</div>
+                    <h3 class="step-title">AI Analyzes with Context and Empathy</h3>
+                    <p class="step-description">Highlights recognized emotional tone & context for comprehensive analysis.</p>
+                </div>
+                <div class="step-arrow">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6"/>
+                    </svg>
+                </div>
+                <div class="step-card">
+                    <div class="step-number green">3</div>
+                    <h3 class="step-title">Smart Solution Delivered</h3>
+                    <p class="step-description">Clear advice and actionable steps backed by common-sense reasoning.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact" id="contact">
+    <!-- Examples -->
+    <section id="examples" class="examples">
         <div class="container">
-            <div class="contact__content">
-                <div class="contact__info">
-                    <h2 class="section__title">Get Help Today</h2>
-                    <p class="section__subtitle">
-                        Submit your issue and let our experts handle the rest. We'll get back to you within 24 hours.
-                    </p>
-                    <div class="contact__details">
-                        <div class="contact__item">
-                            <i class="fas fa-envelope"></i>
-                            <span>support@drovenq.com</span>
-                        </div>
-                        <div class="contact__item">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
-                        </div>
-                        <div class="contact__item">
-                            <i class="fas fa-clock"></i>
-                            <span>24/7 Support Available</span>
-                        </div>
+            <div class="section-header">
+                <h2 class="section-title">Real-World Examples</h2>
+                <p class="section-subtitle">
+                    See how Drovenq AI handles complex, nuanced situations with human-like understanding.
+                </p>
+            </div>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
                     </div>
+                    <h3 class="example-title">Conflict with a vendor?</h3>
+                    <p class="example-description">Navigate it empathetically with personalized communication strategies.</p>
                 </div>
-                <form class="contact__form" id="contact-form">
-                    <div class="form__group">
-                        <input type="text" id="name" name="name" class="form__input" required>
-                        <label for="name" class="form__label">Full Name</label>
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
                     </div>
-                    <div class="form__group">
-                        <input type="email" id="email" name="email" class="form__input" required>
-                        <label for="email" class="form__label">Email Address</label>
+                    <h3 class="example-title">Need a user support reply?</h3>
+                    <p class="example-description">Handles tone and context accurately for professional responses.</p>
+                </div>
+                <div class="example-card">
+                    <div class="example-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
                     </div>
-                    <div class="form__group">
-                        <input type="tel" id="mobile" name="mobile" class="form__input" required>
-                        <label for="mobile" class="form__label">Mobile Number</label>
+                    <h3 class="example-title">Complex decision making?</h3>
+                    <p class="example-description">Weighs multiple factors with emotional and practical considerations.</p>
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="testimonial">
+                <div class="testimonial-avatar">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <blockquote class="testimonial-quote">
+                    "Finally, an AI that doesn't just process my words but truly understands what I'm trying to communicate. 
+                    The contextual awareness and empathetic responses have transformed how I handle difficult conversations."
+                </blockquote>
+                <cite class="testimonial-author">Beta User Testimonial</cite>
+                <p class="testimonial-role">Early Access Program</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Started</h2>
+                <p class="section-subtitle">
+                    Ready to experience AI that truly understands? Let's start with your challenge.
+                </p>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
                     </div>
-                    <div class="form__group">
-                        <textarea id="issue" name="issue" class="form__input form__textarea" rows="5" required></textarea>
-                        <label for="issue" class="form__label">Describe Your Issue</label>
+                    <div class="form-group">
+                        <label for="context">Brief Context (Optional)</label>
+                        <textarea id="context" name="context" rows="4" placeholder="Describe a challenge you'd like our AI to help you think through..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full">Submit Issue</button>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">
+                            Talk to Me
+                            <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
+                
+                <div class="contact-info">
+                    <div class="contact-email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>info@drovenq.com</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
+    <!-- FAQ -->
+    <section id="faq" class="faq">
         <div class="container">
-            <div class="section__header">
-                <h2 class="section__title">Frequently Asked Questions</h2>
-                <p class="section__subtitle">Common questions about our services</p>
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">
+                    Everything you need to know about our emotionally intelligent AI.
+                </p>
             </div>
-            <div class="faq__content">
-                <div class="faq__item">
-                    <div class="faq__question">
-                        <h3>How long does it typically take to resolve an issue?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq__answer">
-                        <p>Resolution time varies depending on the complexity of the issue, but most cases are resolved within 2-4 weeks. We provide regular updates throughout the process.</p>
-                    </div>
-                </div>
-                <div class="faq__item">
-                    <div class="faq__question">
-                        <h3>What types of issues do you handle?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq__answer">
-                        <p>We handle payment disputes, refund issues, insurance claims, customer service escalations, and various bureaucratic problems with companies and institutions.</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How does this AI understand emotions?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our AI uses advanced natural language processing combined with sentiment analysis and contextual understanding to detect emotional nuances in communication, allowing for more empathetic and appropriate responses.</p>
                     </div>
                 </div>
-                <div class="faq__item">
-                    <div class="faq__question">
-                        <h3>How much do your services cost?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How accurate is it in nuanced contexts?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Through extensive training on real-world scenarios and continuous learning, our AI achieves high accuracy in contextual understanding. It considers multiple factors including cultural context, situational awareness, and implied meanings.</p>
                     </div>
-                    <div class="faq__answer">
-                        <p>Our fees depend on the complexity of your case. We offer transparent pricing with no hidden charges. Contact us for a free consultation and quote.</p>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What domains is it trained on?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our AI is trained across multiple domains including business communication, conflict resolution, customer service, personal advisory, and general problem-solving scenarios with emphasis on human interaction patterns.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Is my data private?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m6 9 6 6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We employ end-to-end encryption, don't store personal conversations permanently, and follow strict data privacy protocols. Your information is never shared with third parties.</p>
                     </div>
                 </div>
             </div>
@@ -283,41 +314,63 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__content">
-                <div class="footer__section">
-                    <h3 class="footer__title">Drovenq Solutions</h3>
-                    <p class="footer__description">
-                        Your trusted partner in resolving service issues and bureaucratic challenges.
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                        </svg>
+                        <span class="logo-text">Drovenq AI</span>
+                    </div>
+                    <p class="footer-description">
+                        The AI that understands you. Solving problems with empathy, context, and real-world common sense.
                     </p>
                 </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Quick Links</h4>
-                    <ul class="footer__links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#examples">Use Cases</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Legal</h4>
-                    <ul class="footer__links">
-                        <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms of Service</a></li>
+                
+                <div class="footer-legal">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Data Handling</a></li>
                     </ul>
-                </div>
-                <div class="footer__section">
-                    <h4 class="footer__subtitle">Follow Us</h4>
-                    <div class="footer__social">
-                        <a href="#" class="social__link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social__link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social__link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social__link"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
             </div>
-            <div class="footer__bottom">
-                <p>&copy; 2025 Drovenq Solutions. All rights reserved.</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Drovenq AI. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                            <path d="M9 18c-4.51 2-5-2-7-2"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
