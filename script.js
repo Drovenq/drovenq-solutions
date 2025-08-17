@@ -1,255 +1,169 @@
-// Mobile Navigation Toggle
-const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
-
-if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show-menu');
+// FAQ Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
         
-        // Change hamburger icon to X when menu is open
-        const icon = navToggle.querySelector('i');
-        if (navMenu.classList.contains('show-menu')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-}
-
-// Close mobile menu when clicking on a nav link
-const navLinks = document.querySelectorAll('.nav__link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (navMenu && navMenu.classList.contains('show-menu')) {
-            navMenu.classList.remove('show-menu');
-            const icon = navToggle.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-});
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = target.offsetTop - headerHeight;
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
             
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
+            // Close all FAQ items
+            faqItems.forEach(faqItem => {
+                faqItem.classList.remove('active');
             });
-        }
-    });
-});
-
-// FAQ Accordion Functionality
-const faqItems = document.querySelectorAll('.faq__item');
-faqItems.forEach(item => {
-    const question = item.querySelector('.faq__question');
-    const answer = item.querySelector('.faq__answer');
-    const icon = question.querySelector('i');
-    
-    // Initially hide all answers
-    answer.style.display = 'none';
-    
-    question.addEventListener('click', () => {
-        const isOpen = answer.style.display === 'block';
-        
-        // Close all other FAQ items
-        faqItems.forEach(otherItem => {
-            if (otherItem !== item) {
-                const otherAnswer = otherItem.querySelector('.faq__answer');
-                const otherIcon = otherItem.querySelector('.faq__question i');
-                otherAnswer.style.display = 'none';
-                otherIcon.style.transform = 'rotate(0deg)';
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
             }
         });
-        
-        // Toggle current item
-        if (isOpen) {
-            answer.style.display = 'none';
-            icon.style.transform = 'rotate(0deg)';
-        } else {
-            answer.style.display = 'block';
-            icon.style.transform = 'rotate(180deg)';
-        }
     });
 });
 
-// Form Handling
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const mobile = formData.get('mobile');
-        const issue = formData.get('issue');
-        
-        // Basic validation
-        if (!name || !email || !mobile || !issue) {
-            alert('Please fill in all fields.');
-            return;
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-        
-        // Mobile validation (basic)
-        const mobileRegex = /^[+]?[\d\s\-\(\)]{10,}$/;
-        if (!mobileRegex.test(mobile)) {
-            alert('Please enter a valid mobile number.');
-            return;
-        }
-        
-        // Show success message
-        alert('Thank you for your submission! We will get back to you within 24 hours.');
-        
-        // Reset form
-        this.reset();
-        
-        // In a real implementation, you would send this data to your server
-        // or use a service like EmailJS, Formspree, or Netlify Forms
-        console.log('Form data:', { name, email, mobile, issue });
+// Contact Form Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                context: formData.get('context')
+            };
+            
+            // Here you would typically send the data to your server
+            console.log('Form submitted:', data);
+            
+            // Show success message (you can customize this)
+            alert('Thank you for your interest! We\'ll get back to you soon.');
+            
+            // Reset form
+            contactForm.reset();
+        });
+    }
+});
+
+// Smooth scrolling for navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-}
+});
 
 // Header scroll effect
-let lastScrollTop = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.header');
     
-    // Add/remove shadow based on scroll position
-    if (scrollTop > 100) {
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = 'none';
-    }
-    
-    // Hide/show header on scroll (optional)
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        // Scrolling up or at top
-        header.style.transform = 'translateY(0)';
-    }
-    
-    lastScrollTop = scrollTop;
-});
-
-// Animate elements on scroll (Intersection Observer)
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-const animatedElements = document.querySelectorAll('.service__card, .step, .testimonial__card, .section__header');
-animatedElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
-
-// Loading animation for images (optional)
-const images = document.querySelectorAll('img');
-images.forEach(img => {
-    img.addEventListener('load', function() {
-        this.style.opacity = '1';
-    });
-});
-
-// Form label animation
-const formInputs = document.querySelectorAll('.form__input');
-formInputs.forEach(input => {
-    // Set placeholder attribute for CSS selector
-    input.setAttribute('placeholder', ' ');
-    
-    input.addEventListener('focus', () => {
-        input.parentElement.classList.add('focused');
-    });
-    
-    input.addEventListener('blur', () => {
-        if (input.value === '') {
-            input.parentElement.classList.remove('focused');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(255, 255, 255, 0.98)';
+            header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
         }
     });
 });
 
-// Keyboard navigation enhancement
-document.addEventListener('keydown', (e) => {
-    // ESC key closes mobile menu
-    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('show-menu')) {
-        navMenu.classList.remove('show-menu');
-        const icon = navToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-});
-
-// Performance optimization: Throttle scroll events
-function throttle(func, limit) {
-    let inThrottle;
-    return function() {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => inThrottle = false, limit);
-        }
-    }
-}
-
-// Apply throttling to scroll events
-window.addEventListener('scroll', throttle(() => {
-    // Your scroll logic here if needed
-}, 100));
-
-// Add loading state to buttons on click
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        if (this.type === 'submit') {
-            const originalText = this.textContent;
-            this.textContent = 'Submitting...';
-            this.disabled = true;
+// Button click animations
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.btn');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
             
-            // Re-enable after 3 seconds (or when form processing is complete)
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
             setTimeout(() => {
-                this.textContent = originalText;
-                this.disabled = false;
-            }, 3000);
-        }
+                ripple.remove();
+            }, 600);
+        });
     });
 });
 
-// Console welcome message
-console.log('%c🚀 Welcome to Drovenq Solutions!', 'color: #2563eb; font-size: 16px; font-weight: bold;');
-console.log('%cFor any technical issues, please contact our support team.', 'color: #6b7280; font-size: 12px;');
+// Add ripple effect styles dynamically
+const style = document.createElement('style');
+style.textContent = `
+    .btn {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// Intersection Observer for animations
+document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.capability-card, .step-card, .example-card');
+    
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+});
